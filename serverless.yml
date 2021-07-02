@@ -22,8 +22,8 @@ provider:
   runtime: python3.7
 
 # you can overwrite defaults here
-#  stage: dev
-#  region: us-east-1
+  stage: prod
+  region: us-east-1
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
@@ -55,7 +55,7 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
+  kill-switch:
     handler: kill-switch.main
 
 #    The following are a few example events you can configure
