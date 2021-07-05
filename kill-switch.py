@@ -24,7 +24,7 @@ def truncate_float(f) -> float:
     return float(xs[0] + '.' + xs[1][:6])
 
 
-def main():
+def main(event, context):
     base_currency = 'USD'
 
     exchange = init_exchange()
@@ -43,4 +43,6 @@ def main():
                 except InsufficientFunds as e:
                     print(e)
 
-main()
+
+if __name__ == "__main__":
+    main('', '')
