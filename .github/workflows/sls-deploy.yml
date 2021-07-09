@@ -22,7 +22,7 @@ jobs:
     - name: serverless deploy
       uses: quantegytrading/github-action@master
       with:
-        args: -c "serverless plugin install -n serverless-python-requirements && serverless deploy --verbose"
+        args: -c "sudo apt-get install python-pip | python -v | serverless plugin install -n serverless-python-requirements && serverless deploy --verbose"
         entrypoint: /bin/bash
       env:
          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
