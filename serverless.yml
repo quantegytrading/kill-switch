@@ -57,6 +57,10 @@ provider:
 functions:
   kill-switch:
     handler: kill-switch.main
+    environment:
+      eid: ${env:EXCHANGE_ID}
+      key: ${env:API_KEY}
+      secret: ${env:API_SECRET}
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
