@@ -35,7 +35,7 @@ def main(event, context):
             if free > 0:
                 print(symbol + ": " + str(free))
                 try:
-                    order = exchange.createMarketSellOrder(symbol + '/' + base_currency, free)
+                    # order = exchange.createMarketSellOrder(symbol + '/' + base_currency, free)
                     print("Sell:")
                     print(order)
                 except InvalidOrder as e:
