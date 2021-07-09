@@ -19,7 +19,7 @@ service: kill-switch # NOTE: update this with your service name
 
 provider:
   name: aws
-  runtime: python3.7
+  runtime: python3.8
 
 # you can overwrite defaults here
   stage: prod
@@ -103,3 +103,6 @@ functions:
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
+
+plugins:
+  - serverless-python-requirements
